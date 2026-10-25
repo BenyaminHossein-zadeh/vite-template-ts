@@ -1,9 +1,10 @@
-name: npm test
+name: Bun CI
 
 on:
   pull_request:
     branches:
       - '**'
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.number || github.sha }}
@@ -17,11 +18,12 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version-file: '.nvmrc'
-          cache: 'bun'
-          cache-dependency-path: '**/bun.lock'
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Install dependencies
-        run: yarn
+        run: bun install --frozen-lockfile
+      - name: Run lint
+        run: bun run lint
       - name: Run build
-        run: npm run build
-      - name: Run tests
-        run: npm test
+        run: bun run build
