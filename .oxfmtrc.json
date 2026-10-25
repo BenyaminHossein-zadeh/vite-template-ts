@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "sortImports": {
+    "sortSideEffects": true,
+    "newlinesBetween": false,
+    "customGroups": [
+      {
+        "groupName": "local_css",
+        "elementNamePattern": ["./**/*.css", "../**/*.css"]
+      },
+      { "groupName": "react", "elementNamePattern": ["react"] },
+      { "groupName": "next", "elementNamePattern": ["next", "next/**"] },
+      { "groupName": "root_alias", "elementNamePattern": ["@/**"] }
+    ],
+    "groups": [
+      "react",
+      "next",
+      "builtin",
+      "external",
+      "root_alias",
+      "parent",
+      "sibling",
+      "index",
+      "local_css",
+      { "newlinesBetween": true },
+      "unknown"
+    ]
+  },
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "*.d.ts",
+    "*.mdx",
+    "*.md",
+    "packages/*/*/styles.css",
+    "packages/*/*/styles.layer.css",
+    "packages/*/*/styles/*.css",
+    "docs/.next",
+    "docs/out"
+  ]
+}
