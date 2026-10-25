@@ -91,15 +91,14 @@
     "react/use-memo": "off",
     "react/preserve-manual-memoization": "off",
     "react/incompatible-library": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/rules-of-hooks": "error",
 
     "jsx-a11y/no-autofocus": "off",
     "jsx-a11y/mouse-events-have-key-events": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/anchor-has-content": "off",
-
-    "react-hooks/exhaustive-deps": "off",
-
     "jsx-a11y/role-has-required-aria-props": "off",
     "jsx-a11y/prefer-tag-over-role": "off",
 
