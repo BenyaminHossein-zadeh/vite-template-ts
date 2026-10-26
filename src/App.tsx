@@ -1,5 +1,6 @@
+import './global.css';
 const App = () => {
-  return <div>App developing</div>;
+  return <div className="">App developing</div>;
 };
 
 export default App;

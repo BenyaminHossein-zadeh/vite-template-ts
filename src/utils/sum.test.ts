@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest';
-import sum from './sum';
+import { sum } from './sum';
 test('sum util with two number', () => {
   expect(sum(2, 5))?.toBe(7);
 });

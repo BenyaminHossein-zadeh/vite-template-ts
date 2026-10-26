@@ -1,7 +1,14 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "jsx-a11y", "jest"],
+  "plugins": ["react", "typescript", "jsx-a11y", "jest", "unicorn"],
   "rules": {
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "camelCase",
+        "ignore": ["^App\\.tsx$", "^App\\.test\\.ts$"]
+      }
+    ],
     "array-callback-return": "error",
     "no-duplicate-imports": "error",
     "no-var": "error",
