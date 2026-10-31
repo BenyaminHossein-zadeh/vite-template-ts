@@ -5,8 +5,7 @@
     "unicorn/filename-case": [
       "error",
       {
-        "case": "camelCase",
-        "ignore": ["^App\\.tsx$", "^App\\.test\\.ts$"]
+        "case": "camelCase"
       }
     ],
     "array-callback-return": "error",

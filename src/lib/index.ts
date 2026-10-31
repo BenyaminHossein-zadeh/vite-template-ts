@@ -1,2 +1,2 @@
-export * from './httpClient';
+export * from './interceptor';
 export * from './cn';
